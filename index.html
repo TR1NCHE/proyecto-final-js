@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización de Seguro</title>
+</head>
+<body>
+    <h1>Cotización de Seguro</h1>
+    <form id="formCotizacion">
+        <label for="marca">Marca:</label>
+        <select id="marca">
+            <option value="fiat">Fiat</option>
+            <option value="ford">Ford</option>
+            <option value="bmw">BMW</option>
+            <option value="honda">Honda</option>
+        </select>
+
+        <label for="año">Año:</label>
+        <input type="number" id="año" min="1900" max="2024" required>
+
+        <label for="version">Versión:</label>
+        <select id="version">
+            <option value="basica">Básica</option>
+            <option value="media">Media</option>
+            <option value="premium">Premium</option>
+        </select>
+
+        <button type="submit">Cotizar</button>
+    </form>
+
+    <h2 id="resultado"></h2>
+
+    <script src="index.js"></script>
+</body>
+</html>
