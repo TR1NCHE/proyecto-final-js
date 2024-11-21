@@ -64,14 +64,12 @@ window.addEventListener("load", async function () {
     console.log("Datos de marcas cargados:", marcas);
 });
 
-// Función para realizar solicitudes AJAX con Fetch
 async function fetchDatos(url) {
     try {
-        const respuesta = await fetch(url);
-        if (!respuesta.ok) throw new Error(`Error: ${respuesta.statusText}`);
-        return await respuesta.json();
+        const respuesta = await axios.get(url); 
+        return respuesta.data; 
     } catch (error) {
-        console.error("Error al obtener datos:", error);
+        console.error("Error al obtener datos:", error.message);
         return [];
     }
 }
